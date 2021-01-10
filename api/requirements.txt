@@ -1,0 +1,8 @@
+django
+psycopg2-binary
+Pillow
+pylint
+pylint-django
+django-filter
+djangorestframework
+django-cors-headers
