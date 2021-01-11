@@ -21,8 +21,11 @@ const DetailSingleNews = ({notice, state, setState, setGlobalState }) =>{
                 title={notice.title}
             />
             <Card.Body>                
-                <img src={notice.principal_image} style={styles.cardNotice.image} alt='post' />
-                <div style={styles.cardNotice.spaceDate}> Publicada el {notice.created.slice(0,10)} a las {notice.created.slice(11)} Hrs</div>
+              {notice.principal_image &&
+<img src={notice.principal_image} style={styles.cardNotice.image} alt='post' />
+              }
+                
+      <div style={styles.cardNotice.spaceDate}> Publicada el {notice.created.slice(0,10)} a las {notice.created.slice(11)} Hrs</div>
                 <ShareButtons quote={notice.title} url={notice.link} notice={notice}/>
                 <div style={styles.cardNotice.textNotice} dangerouslySetInnerHTML={{ __html: notice.description }}></div>
             </Card.Body>

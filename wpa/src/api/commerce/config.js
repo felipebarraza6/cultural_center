@@ -1,11 +1,11 @@
 import axios from 'axios'
 
 const INSTANCE = axios.create({
-    baseURL:"http://localhost:8000/api/"
+    baseURL:"http://45.236.129.182:8000/api/"
 })
 
 const INSTANCE_LOGIN = axios.create({
-    baseURL:"http://localhost:8000/api/users/"
+    baseURL:"http://:45.236.129.182:8000/api/users/"
 })
 
 

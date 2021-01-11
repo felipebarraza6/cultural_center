@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const INSTANCE = axios.create({
-    baseURL:"http://localhost:8000/api"
+  baseURL:"http://45.236.129.182:8000/api"
 })
 
 export const GET = async(endpoint) =>{    
