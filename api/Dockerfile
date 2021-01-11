@@ -1,6 +1,5 @@
 # Base image.
 FROM python:3
-
 RUN mkdir /code
 # Set working dir.
 WORKDIR /code
