@@ -33,6 +33,9 @@ services:
   #      image: pwa_cultural
   #      ports:
   #          - "80:80"
+  #          - "443:443"
   #      depends_on:
   #          - django
   #          - postgres
+  #      volumes:
+  #          - /data/certs:/etc/nginx/certs
