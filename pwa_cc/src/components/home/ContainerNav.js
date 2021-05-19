@@ -11,6 +11,7 @@ const ContainerNav = () => {
     return(
         <Switch>                    
             <Route exact path='/bilboard' component={()=>ListPosts({pathname:'bilboard'})} />
+            <Route exact path='/' component={()=>ListPosts({pathname:'bilboard'})} />
             <Route exact path='/workshops' component={()=>ListPosts({pathname:'workshops'})} />
             <Route exact path='/about' component={()=>ListPosts({pathname:'about'})} />
             <Route exact path='/news' component={()=>ListPosts({pathname:'news'})} />
