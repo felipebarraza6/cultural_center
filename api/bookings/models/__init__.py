@@ -1,1 +1,1 @@
-from .bookings import Booking
+from .bookings import Booking, FastBook

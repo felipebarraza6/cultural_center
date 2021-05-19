@@ -1,1 +1,1 @@
-from .bookings import BookingModel
+from .bookings import BookingModel, FastBookModel

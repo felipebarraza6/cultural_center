@@ -17,3 +17,10 @@ class Booking(CoreModel):
 
     def __str__(self):
         return str(self.user)
+
+class FastBook(CoreModel):
+    user = models.ForeignKey('users.User', related_name='fast_book_user', on_delete=models.CASCADE)
+    event_text_title = models.TextField(max_length=400)
+
+    def __str__(self):
+        return str(self.user)

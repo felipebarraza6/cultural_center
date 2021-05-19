@@ -13,11 +13,11 @@ from rest_framework.permissions import (
 )
 
 # Serializers
-from api.bookings.serializers import BookingModel
+from api.bookings.serializers import BookingModel, FastBookModel
 
 
 # Models
-from api.bookings.models import Booking
+from api.bookings.models import Booking, FastBook
 
 #Filters
 from django_filters import rest_framework as filters
@@ -35,3 +35,14 @@ class BookingViewSet(viewsets.GenericViewSet,
     def get_serializer_class(self):        
         return BookingModel
 
+class FastBookViewSet(viewsets.GenericViewSet,
+                mixins.CreateModelMixin):
+    
+    queryset = FastBook.objects.all()    
+    lookup_field = 'id'
+    filter_backends = (filters.DjangoFilterBackend,)
+
+    permission_classes = [IsAuthenticated]
+
+    def get_serializer_class(self):        
+        return FastBookModel
